@@ -48,8 +48,13 @@ class CLI
             @char = Characters.all.find { |info| info.name == name.join(' ')} 
             print_character(@char)
         elsif selection == "Episodes" 
+            puts ""
             puts "Please enter the name of the episode, or the season and episode number you would like to learn about!" 
             name_or_epid = gets.chomp
+            ques_answer = API.fetch_episodes(name_or_epid)
+            @ep = Episodes.all.find { |ep_info| ep_info.title == name_or_epid}
+           
+
 
         else 
             puts ""

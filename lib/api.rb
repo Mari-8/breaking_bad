@@ -1,7 +1,7 @@
 require 'pry'
 
 class API 
-  attr_accessor :name, :episode, :quote
+  attr_accessor :name, :episode, :quote 
 
 
   def self.fetch_characters(name) 
@@ -15,6 +15,15 @@ class API
  
     
   end 
+
+  def self.fetch_episodes(name_or_epid)
+    url = "https://www.breakingbadapi.com/api/episodes"
+    uri = URI(url)
+    response = Net::HTTP.get(uri) 
+    episode_info = JSON.parse(response)
+    #episode_info.each { |ep| ep.title == name_or_epid} 
+    binding.pry
+  end
 
 
 end 
