@@ -8,4 +8,4 @@ require_relative './lib/api'
 require_relative './lib/cli'
 require_relative './lib/characters'
 require_relative './lib/episodes'
-require_relative './lib/quotes'
+

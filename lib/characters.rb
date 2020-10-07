@@ -6,7 +6,7 @@ class Characters
     @@all = []
 
     def initialize(name:, char_id:, birthday:, occupation:, nickname:, appears_in_seasons:, actor:)
-        @name = name 
+        @name = name
         @char_id = char_id 
         @birthday = birthday 
         @occupation = occupation 

@@ -17,12 +17,19 @@ class API
   end 
 
   def self.fetch_episodes(name_or_epid)
+  
     url = "https://www.breakingbadapi.com/api/episodes"
     uri = URI(url)
     response = Net::HTTP.get(uri) 
     episode_info = JSON.parse(response)
-    #episode_info.each { |ep| ep.title == name_or_epid} 
-    binding.pry
+    episode_info.each do |ep_info| 
+      if ep_info["title"] == name_or_epid
+         Episodes.new(episode_id: ep_info["episode_id"], title: ep_info["title"], air_date: ep_info["air_date"], main_characters: ep_info["characters"], season: ep_info["season"], episode: ep_info["episode"]) 
+      else 
+        nil 
+      end 
+    end
+    
   end
 
 
