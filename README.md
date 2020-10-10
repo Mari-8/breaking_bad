@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # breaking_bad_info_CLI
 
 
@@ -9,3 +10,7 @@ If you are looking for episode information, you can search by the name of an epi
 If you enter "No" when the program asks if youd like to look for something else, it will exit the program. 
 
 Thank you for checking out my first CLI application and I hope you enjoyed!
+=======
+# breaking_bad_info
+
+>>>>>>> d3a4b371f44b688c00628b7d00cf8e302dc360f9
