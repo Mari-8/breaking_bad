@@ -1,5 +1,4 @@
-#connnect the whole program so files talk
-#require gems we need 
+
 require 'pry'
 require 'net/http'
 require 'json' 
