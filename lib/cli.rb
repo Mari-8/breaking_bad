@@ -75,10 +75,6 @@ class CLI
             puts ""
             puts "Please enter the title of the episode you would like to learn about, or type list to see a list of episodes titles!"
             user_input_title
-            #ans = @ep_title
-           # ques_answer = API.fetch_episodes(ans)
-           # @ep = Episodes.all.find { |ep_info| ep_info.title == ans.join(' ')}
-           # print_episode(@ep)
         else 
             begin
                 raise MyError.new "Input not found. Check your spelling, and remember to always capitalize the first letter!"
